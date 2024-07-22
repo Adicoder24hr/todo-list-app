@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body main {
+  width: 100%;
+  max-width: 100vw;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+}
+body main img {
+  width: 100%;
+}
+body main .todo-main {
+  position: absolute;
+  align-self: center;
+  width: 40%;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+body main .todo-main .todo-light-dark {
+  display: flex;
+  justify-content: space-between;
+}
+body main .todo-main .todo-light-dark img {
+  width: 30px;
+  height: 30px;
+}
+body main .todo-main .todo-light-dark h2 {
+  color: hsl(0, 0%, 98%);
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  font-size: 35px;
+}
+body main .todo-main .drag-drop {
+  text-align: center;
+  font-weight: 500;
+  opacity: 0.4;
+}
+body main .todo-main .todo-input-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body main .todo-main .todo-input-list #todo-input {
+  width: 100%;
+  border: none;
+  padding: 20px 18px;
+  border-radius: 5px;
+}
+body main .todo-main .todo-input-list #todo-input::placeholder {
+  padding-left: 30px;
+  opacity: 0.7;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Josefin Sans", sans-serif;
+}
+body main .todo-main .todo-input-list #todo-status {
+  display: flex;
+  justify-content: space-between;
+}
+body main .todo-main .todo-input-list #todo-status .states {
+  display: flex;
+  gap: 10px;
+}
+body main .todo-main .todo-input-list #todo-status .states #all {
+  color: hsl(220, 98%, 61%);
+  font-weight: 500;
+}
+body main .todo-main .todo-input-list #todo-status .states .ordinary {
+  opacity: 0.4;
+  font-weight: 500;
+}
+body main .todo-main .todo-input-list #todo-status p {
+  opacity: 0.4;
+  font-weight: 500;
+}
+body main .todo-main .todo-input-list #todo-status p:hover {
+  cursor: pointer;
+}
+body main .todo-main .todo-input-list .todo-list {
+  background-color: hsl(0, 0%, 98%);
+  padding: 20px 18px;
+  border-radius: 5px;
+}
