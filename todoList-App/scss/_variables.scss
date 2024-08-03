@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 // Primary colors
@@ -22,3 +24,33 @@ $Very-Dark-Grayish-Blue-Dark-Alt: hsl(237, 14%, 26%);
 
 // Font family
 $josefin: "Josefin Sans", sans-serif;
+
+$breakpoint-up: (
+  "tablet": em(800),
+  "laptop": em(1024),
+  "large": em(2040),
+);
+
+@mixin breakpoint($size){
+    @media screen and (min-width: map-get($breakpoint-up,$size)){
+        @content;
+    }
+}
+
+@function rem($pixels){
+    @if math.is-unitless($pixels){
+        @return math.div($pixels, 16) + rem;
+    }
+    @else {
+        @error "There is a unit present in the value";
+    }
+}
+
+@function em($pixels){
+    @if math.is-unitless($pixels){
+        @return math.div($pixels, 16) + em;
+    }
+    @else {
+        @error "There is a unit present in the value";
+    }
+}

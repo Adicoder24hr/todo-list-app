@@ -1,0 +1,72 @@
+@use "./reset" as *;
+@use "./variables" as *;
+
+body.dark-mode {
+    background-color: $Very-Dark-Blue;
+    color: $Very-Light-Gray;
+
+    & .todo-main {
+        color: $Light-Grayish-Blue-Dark;
+    }
+
+    & .todo-input-list {
+        background-color: transparent;
+    }
+
+    & .todo-item {
+        background-color: $Very-Dark-Desaturated-Blue !important;
+        border-top: 0.5px solid $Light-Grayish-Blue-Light !important;
+        color: #ffffff !important;
+    }
+
+    & #todo-status {
+        background-color: $Very-Dark-Desaturated-Blue !important;
+        border-top: 0.5px solid $Light-Grayish-Blue-Dark !important;
+
+        & .states{
+            background-color: $Very-Dark-Desaturated-Blue !important;
+            border-top: 0.5px solid $Light-Grayish-Blue-Dark !important;
+        }
+    }
+
+    & #todo-input {
+        background-color: $Very-Dark-Desaturated-Blue !important;
+        color: #ffffff !important;
+    }
+
+    & .todo-checkbox {
+        background-color: $Very-Dark-Desaturated-Blue !important;
+        border-color: #555555 !important;
+    }
+
+    & .todo-checkbox:checked {
+        background: linear-gradient(to right, #478CCF, #604CC3) !important;
+    }
+
+    & .todo-text {
+        color: #ffffff !important;
+    }
+
+    & .todo-item.completed .todo-text {
+        color: #888888 !important;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    body{
+        main{
+            .todo-main{
+
+                .todo-input-list{
+                    .todo-list{
+                        #todo-status{
+                            .states{
+                                border: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

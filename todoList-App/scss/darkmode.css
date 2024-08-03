@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body.dark-mode {
+  background-color: hsl(235, 21%, 11%);
+  color: hsl(0, 0%, 98%);
+}
+body.dark-mode .todo-main {
+  color: hsl(234, 39%, 85%);
+}
+body.dark-mode .todo-input-list {
+  background-color: transparent;
+}
+body.dark-mode .todo-item {
+  background-color: hsl(235, 24%, 19%) !important;
+  border-top: 0.5px solid hsl(233, 11%, 84%) !important;
+  color: #ffffff !important;
+}
+body.dark-mode #todo-status {
+  background-color: hsl(235, 24%, 19%) !important;
+  border-top: 0.5px solid hsl(234, 39%, 85%) !important;
+}
+body.dark-mode #todo-input {
+  background-color: hsl(235, 24%, 19%) !important;
+  color: #ffffff !important;
+}
+body.dark-mode .todo-checkbox {
+  background-color: hsl(235, 24%, 19%) !important;
+  border-color: #555555 !important;
+}
+body.dark-mode .todo-checkbox:checked {
+  background: linear-gradient(to right, #478CCF, #604CC3) !important;
+}
+body.dark-mode .todo-text {
+  color: #ffffff !important;
+}
+body.dark-mode .todo-item.completed .todo-text {
+  color: #888888 !important;
+}/*# sourceMappingURL=darkmode.css.map */
